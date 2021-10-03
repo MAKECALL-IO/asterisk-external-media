@@ -17,6 +17,7 @@ See https://cloud.google.com/speech-to-text/docs/ for more information.
 ```
 ;For CentOS 7 User
 yum install -y  unzip nodejs
+npm install --save-optional utf-8-validate
 ```
 
 
