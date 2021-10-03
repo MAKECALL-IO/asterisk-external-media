@@ -23,6 +23,8 @@ sudo yum install -y nodejs
 cd /root/asterisk-external-media-master
 npm install -g
 ari-transcriber --help
+
+ari-transcriber --format=slin16 'Local/1002' --listenServer=0.0.0.0:6600 --ariServerUrl=bcs.makecall.io:8089 --ariUser=olssoo --ariPassword=015500 --speechLang=ko-KR
 ```
 
 
