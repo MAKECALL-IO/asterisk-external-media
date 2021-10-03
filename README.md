@@ -39,7 +39,7 @@ https://bcs.makecall.io:8089/ari/channels/externalMedia?app=olssoo-app&external_
 ari-transcriber --format=slin16 'Local/1002' --listenServer=0.0.0.0:6600 --ariServerUrl=bcs.makecall.io:8089 --ariUser=olssoo --ariPassword=015500 --speechLang=ko-KR --speakerDiarization true
 
 ;; 외부미디어 (ari-transcriber가 운영되는 서버) 
-https://bcs.makecall.io:8089/ari/channels/externalMedia?app=olssoo-app&external_host=172.31.0.100%3A6600&encapsulation=rtp&transport=udp&connection_type=client&format=slin16&direction=both&api_key=olssoo:015500
+https://bcs.makecall.io:8089/ari/channels/externalMedia?app=olssoo-app&external_host=3.36.169.51%3A6600&encapsulation=rtp&transport=udp&connection_type=client&format=slin16&direction=both&api_key=olssoo:015500
 
 ```
 
