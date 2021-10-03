@@ -96,3 +96,9 @@ Just a phone to call.
 $ export GOOGLE_APPLICATION_CREDENTIALS=<path to Google API credentials>
 $ ari-transcriber --format=slin16 'Local/1234'
 ````
+
+```
+export GOOGLE_APPLICATION_CREDENTIALS=client_secret_793164633643-t970559pabngob1hea5cd8p7stjj3qdp.apps.googleusercontent.com.json
+ari-transcriber --format=slin16 'Local/1234'
+```
+
