@@ -14,6 +14,12 @@ the audio from a bridge using the Google Speech APIs.
 * Google Speech API credentials set in environment variable GOOGLE_APPLICATION_CREDENTIALS.  
 See https://cloud.google.com/speech-to-text/docs/ for more information.
 
+```
+;For CentOS 7 User
+yum install -y  unzip nodejs
+```
+
+
 Run `npm install` from the top of the source tree.
 This will install the required npm packages including `node-ari-client` and `@google-cloud/speech`.
 You can then run the transcriber as `bin/ari-transcriber`.  If you add the `-g`
