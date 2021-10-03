@@ -18,9 +18,12 @@ See https://cloud.google.com/speech-to-text/docs/ for more information.
 ;For CentOS 7 User
 yum install -y  unzip
 curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
-sudo yum install -y nodejs
+yum install -y nodejs
+npm i -g npm-check-updates
 
 cd /root/asterisk-external-media-master
+npm i -g npm-check-updates
+ncu -u
 npm install -g
 ari-transcriber --help
 
