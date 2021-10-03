@@ -24,6 +24,7 @@ cd /root/asterisk-external-media-master
 npm install -g
 ari-transcriber --help
 
+export GOOGLE_APPLICATION_CREDENTIALS=makecallio-4dfc1194b038.json
 ari-transcriber --format=slin16 'Local/1002' --listenServer=0.0.0.0:6600 --ariServerUrl=bcs.makecall.io:8089 --ariUser=olssoo --ariPassword=015500 --speechLang=ko-KR
 ```
 
@@ -121,10 +122,5 @@ Just a phone to call.
 ```
 $ export GOOGLE_APPLICATION_CREDENTIALS=<path to Google API credentials>
 $ ari-transcriber --format=slin16 'Local/1234'
-````
-
-```
-export GOOGLE_APPLICATION_CREDENTIALS=client_secret_793164633643-t970559pabngob1hea5cd8p7stjj3qdp.apps.googleusercontent.com.json
-ari-transcriber --format=slin16 'Local/1234'
 ```
 
