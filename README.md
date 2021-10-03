@@ -16,8 +16,13 @@ See https://cloud.google.com/speech-to-text/docs/ for more information.
 
 ```
 ;For CentOS 7 User
-yum install -y  unzip nodejs
-npm install --save-optional utf-8-validate
+yum install -y  unzip
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
+sudo yum install -y nodejs
+
+cd /root/asterisk-external-media-master
+npm install -g
+ari-transcriber --help
 ```
 
 
