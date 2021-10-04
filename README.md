@@ -14,8 +14,9 @@ the audio from a bridge using the Google Speech APIs.
 * Google Speech API credentials set in environment variable GOOGLE_APPLICATION_CREDENTIALS.  
 See https://cloud.google.com/speech-to-text/docs/ for more information.
 
+
+#### DynamicIPCC에서 구동하는 방법
 ```
-;For CentOS 7 User
 yum install -y  unzip
 curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
 yum install -y nodejs
