@@ -30,19 +30,15 @@ ari-transcriber --help
 ;; 구글 STT 인증
 export GOOGLE_APPLICATION_CREDENTIALS=makecallio-4dfc1194b038.json
 
-;; W/ Asteirsk
+;; Asteirsk가 설치된 서버에서 실행
 ;; ARI 이용한 클라이언트 (구글SST와 연결되는 TCP소켓,  Nodejs 기반)
 ari-transcriber --format=slin16 'Local/1002' --listenServer=127.0.0.1:6600 --ariServerUrl=bcs.makecall.io:8089 --ariUser=olssoo --ariPassword=015500 --speechLang=ko-KR --speakerDiarization true
 
-;; 외부미디어 (ari-transcriber가 운영되는 서버) 
-https://bcs.makecall.io:8089/ari/channels/externalMedia?app=olssoo-app&external_host=127.0.0.1%3A6600&encapsulation=rtp&transport=udp&connection_type=client&format=slin16&direction=both&api_key=olssoo:015500
 
-;; Without Asterisk
+;; Asteirsk와 다른 서버에서 실행
 ;; ARI 이용한 클라이언트 (구글SST와 연결되는 TCP소켓,  Nodejs 기반)
 ari-transcriber --format=slin16 'Local/1002' --listenServer=0.0.0.0:6600 --ariServerUrl=bcs.makecall.io:8089 --ariUser=olssoo --ariPassword=015500 --speechLang=ko-KR --speakerDiarization true
 
-;; 외부미디어 (ari-transcriber가 운영되는 서버) 
-https://bcs.makecall.io:8089/ari/channels/externalMedia?app=olssoo-app&external_host=3.36.169.51%3A6600&encapsulation=rtp&transport=udp&connection_type=client&format=slin16&direction=both&api_key=olssoo:015500
 
 ```
 
@@ -52,19 +48,6 @@ https://bcs.makecall.io:8089/ari/channels/externalMedia?app=olssoo-app&external_
 ```
 ;구글 인증 파일
 ;makecallio-4dfc1194b038.json
-
-{
-  "type": "service_account",
-  "project_id": "makecallio",
-  "private_key_id": "4dfc1194b038af1610f48e7710dc93a696068bc8",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCnB+l0tPHWZ2De\nxrK+TnFQNLyBnDN/8HQqeaAIt9EP1G85uS3W+Zut2fZi/fH8KKVfTXU768rMOSJr\nRX1PEuoOjohi6onKsJmM94vNmQbdGHHi3M/B5DPuTiJC92zX12MyZM0eA4rhUfly\nLACOhdYqNLlKZ3FmLVj7Qrfc6OiHx5kr2cpCQ6mOjLh52ZCfQo+p30dniwMPAr9W\n+uiOUVZNsmHPBpWFRd8MTBDPLnOMzOblvH+sX47/BiWOjQ5QqPfblqYRea/xqkuf\nqcQX9zRxQXqY324uVkE/FZtZwTl+EhBZi0GzM6giNqu+BUY4WWiVqO977R305kme\nz19CpteDAgMBAAECggEAPYP38oALiyuirRlfzh/ksqXhgRiOjQF5PwVxL5THPb2+\nwvMU01Y1hDdAe1/MZdJwaWOFGC70jvdB2mEKz/sG0Zqj105KtigJPTYUOoGv2fC9\nTNCHAYEysQL8sk4eu3V7dp1SP8oNNYOzy10yTUs0P3IQhbsINBniahM91PHAZfS/\n3Upxk+JHemYUt6y5WJVMSubRLtNyCGvp2n0G1djTEPJYzJ9nOjZscZkuQwPo+SXw\nfDneQSV4UxczG0vHbeSZBtqxUMzpc3EjBOmoM+nZkXRPDIrZiBEL0ubfjXzvvlm6\nzxA3Rzp+7bQUs9PKOvjjIWXUyU8NJI+ChLQ3dKMAWQKBgQDXpA93egMl4nOYretY\n5V+daCg7dcdajPrfvzgKsvsDXk/IIWqAsnPeraJGEKTKD7triCHNlGMc0qDV+p1u\najUDjaUb2NJzjsTKqVKFXsnpwIFvxLHs7GV51Tbci5NhIhw5KPAvmjsppb5i+STH\nhYBh5+m2x8gekaUlif+pkRQvmwKBgQDGStEFzaAp73a1QiuxG254AYDIoTUvShlJ\nPl9JGU7xYAUn42ncpVKjiZtlNSr5W+c21hgJTd/jgxzqSDPhHIoqM3vRfZ5ca0Tv\nS1J/WNgg2blJOOLUhghOE9m+s2dKvYMvMAWqhvX6jUJ1Q32AABvBOwuJmMbNncNC\nO5y30l+aOQKBgDqzPkKXxCOb8TuunFImnlCK+ei1tv6/QcuGkgrXjdzs32rrLcK6\n0S/ctD++aB1ZCvvKoukDa7d83qtg/VoBL004Uamy7Bbo1kkUrpH/q5cmABYcxRJp\nh3YSxExk8kmOr4Af1MIgidpcc+cdSxXFEZ2VM9m9qIwpuXruhdny1DvhAoGAVL4U\npk5CbKmSKdSlp4L5qv+5cgSzHgqk09B8GFlgi3dlvK5Lx6g/sPRWHOKkAv1rytuk\nWhWV4T1fViCVS1dPFMn72IO+8fBF/Z5LG3F0rFVgAhL1na3KTtPc8srpEd/7+Gal\nhUM4TGOiS0sUj2d8dRAu1hccnzMVB3FCgKy/fsECgYA0zLs+GeF+OIU/xhyTXCNt\nq6s3QbOV1dg8fQiPooa8YiVqAe43RjGA4LmqW+zh5IRye0/YqPlWuPuY/+lw0mA2\nqRoJdnsFC0uIQFebKzdUgP5fxVd2Sl5krloV5twVD41NIYcbKwjixCIT+hi2rVbC\nBDTkt+7f7Ay6BgHGFbgIcg==\n-----END PRIVATE KEY-----\n",
-  "client_email": "793164633643-compute@developer.gserviceaccount.com",
-  "client_id": "104853134327062216473",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/793164633643-compute%40developer.gserviceaccount.com"
-}
 ```
 
 
