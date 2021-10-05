@@ -31,14 +31,19 @@ ari-transcriber --help
 ;; 구글 STT 인증
 export GOOGLE_APPLICATION_CREDENTIALS=makecallio-4dfc1194b038.json
 
+;; 옵션 설명 
+--speakerDiarization (화자분리, 현재 한국어 지원 안됨)
+--speechModel (video, phone_call)
+
+
 ;; Asteirsk가 설치된 서버에서 실행
 ;; ARI 이용한 클라이언트 (구글SST와 연결되는 TCP소켓,  Nodejs 기반)
-ari-transcriber --format=slin16 'Local/1002' --listenServer=127.0.0.1:6600 --ariServerUrl=bcs.makecall.io:8089 --ariUser=olssoo --ariPassword=015500 --speechLang=ko-KR --speakerDiarization true
+ari-transcriber --format=slin16 'Local/1002' --listenServer=127.0.0.1:6600 --ariServerUrl=bcs.makecall.io:8089 --ariUser=olssoo --ariPassword=015500 --speechLang=ko-KR --speechModel phone_call
 
 
 ;; Asteirsk와 다른 서버에서 실행
 ;; ARI 이용한 클라이언트 (구글SST와 연결되는 TCP소켓,  Nodejs 기반)
-ari-transcriber --format=slin16 'Local/1002' --listenServer=0.0.0.0:6600 --ariServerUrl=bcs.makecall.io:8089 --ariUser=olssoo --ariPassword=015500 --speechLang=ko-KR --speakerDiarization true
+ari-transcriber --format=slin16 'Local/1002' --listenServer=0.0.0.0:6600 --ariServerUrl=bcs.makecall.io:8089 --ariUser=olssoo --ariPassword=015500 --speechLang=ko-KR --speechModel phone_call
 
 
 ```
